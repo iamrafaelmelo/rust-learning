@@ -1,0 +1,10 @@
+[package]
+name = "hello-world_20260310_1791059504"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[[bin]]
+name = "hello-world_20260310_1791059504"
+path = "main.rs"
