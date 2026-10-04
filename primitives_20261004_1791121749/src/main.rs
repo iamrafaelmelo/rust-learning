@@ -20,7 +20,11 @@ fn main() {
     // Integers (sizes based on machine architecture)
     let i: isize = 5; // Signed integer (4 bytes on 32-bit systems, 8 bytes on 64-bit systems)
     let j: usize = 10; // Unsigned integer (4 bytes on 32-bit systems, 8 bytes on 64-bit systems)
-    println!("Architecture-based Integers: i = {i} ({} bytes size), j = {j} ({} bytes size)", std::mem::size_of::<isize>(), std::mem::size_of::<usize>());
+    println!(
+        "Architecture-based Integers: i = {i} ({} bytes size), j = {j} ({} bytes size)",
+        std::mem::size_of_val(&i),
+        std::mem::size_of_val(&j)
+    );
 
     // Integers (with suffixes)
     let k = 100i32;

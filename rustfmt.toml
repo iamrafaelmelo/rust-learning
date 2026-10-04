@@ -1,4 +1,4 @@
 edition = "2024"
-max_width = 240
+max_width = 120
 hard_tabs = false
 group_imports = "StdExternalCrate"   
