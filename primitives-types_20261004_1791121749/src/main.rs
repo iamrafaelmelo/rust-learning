@@ -68,6 +68,20 @@ fn main() {
         smile_emoji_size = std::mem::size_of_val(&smile_emoji)
     );
 
+    // String slices (with a string literal)
+    // Good for cases where we want to reference a string without taking ownership of it, and the string is known at compile time.
+    let message: &'static str = "Hello, Rust!"; // point into the binary read-only section, which is valid for the entire lifetime of the program
+    println!(
+        "String Slice: message = {message} (size: {} bytes)",
+        std::mem::size_of_val(&message)
+    );
+
+    let greeting: &str = "Hello, Rust!"; // compiler infers 'static
+    println!(
+        "String Slice: greeting = {greeting} (size: {} bytes)",
+        std::mem::size_of_val(&greeting)
+    );
+
     // Unit (empty tuple)
     let unit: () = ();
     println!("Unit: tuple = {:?}", unit);
