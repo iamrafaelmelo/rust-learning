@@ -38,4 +38,9 @@ fn main() {
     println!("Floating-point number: {:.2}", 3.14159); // out: 3.14
     println!("Floating-point number (scientific notation): {:.2e}", 3.14159); // out: 3.14e0
     println!("Floating-point number (scientific notation, uppercase): {:.2E}", 3.14159); // out: 3.14E0
+
+    // Debug formatting
+    let words: [&str; 4] = ["Hello", "World", "from", "Rust"];
+    println!("Debug formatting (array): {:?}", words);
+    println!("Pretty debug formatting (array): {:#?}", words);
 }
