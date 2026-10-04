@@ -1,0 +1,6 @@
+[package]
+name = "compound-types_20261004_1791140786"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
